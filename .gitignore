@@ -1,6 +1,6 @@
 
-# Игнорировать файлы *.md из папки publicationsGenerator/output/
 
+# Игнорировать файлы *.md из папки publicationsGenerator/output/
 /publicationsGenerator/output/*.md
 
 
