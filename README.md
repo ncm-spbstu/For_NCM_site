@@ -24,6 +24,7 @@ git basic
 скачивать тут https://git-scm.com/downloads
 
 https://www.youtube.com/playlist?list=PLUYH9oDZsrZ2-p9I_GPrzFCzLH_RUglI_
+ 
 https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb
 
 основные консольные команды:
