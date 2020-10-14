@@ -23,9 +23,11 @@ git basic
 
 скачивать тут https://git-scm.com/downloads
 
-https://www.youtube.com/playlist?list=PLUYH9oDZsrZ2-p9I_GPrzFCzLH_RUglI_
- 
-https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb
+
+обучение:
+<a href="https://www.youtube.com/playlist?list=PLUYH9oDZsrZ2-p9I_GPrzFCzLH_RUglI_"> link 1 </a>
+<a href="https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb"> link 2 </a>
+
 
 основные консольные команды:
 1) git init
