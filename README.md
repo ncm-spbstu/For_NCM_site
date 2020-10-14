@@ -9,13 +9,36 @@ Content list:
 1) _archive folder
 для хранения чего-то неактивного
 
-2) publicationsGenerator
+2) _Add folder
+для того, что нужно добавить на сайт
+
+3) publicationsGenerator
 генератор файлов публикаций по таблице table.xlsx
+
+
+
+
+---------
+git basic
+
+скачивать тут https://git-scm.com/downloads
+
+https://www.youtube.com/playlist?list=PLUYH9oDZsrZ2-p9I_GPrzFCzLH_RUglI_
+https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb
+
+основные консольные команды:
+1) git init
+2) git remote add <name> <source>
+3) git add .
+4) git commit -m <message>
+5) git push <remote> <branch>
+6) git pull <remote>
+
 
 
 ---------
 Plan to test:
-1) Необходимо ли каждую публикацияю отмечать отдельным файлом?
+null
 
 
 ---------
