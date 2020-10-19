@@ -3,35 +3,40 @@ clc
 
 % LOAD ------------------------------------------
 importTable = readtable('table.xlsx');
-i=0;
-for index = 1:size(importTable,1)
-
+for i = 1:size(importTable,1)
+    disp(['Load ' num2str(i) ' of ' num2str(size(importTable,1))])
     
     
-    condition = string(cell2mat(importTable{index,2})) ~= "" && ...
-                string(cell2mat(importTable{index,3})) ~= "" && ...
-                string(cell2mat(importTable{index,5})) ~= "" && ...
-                string(cell2mat(importTable{index,6})) ~= "";
+    condition = string(cell2mat(importTable{i,2})) ~= "" && ...
+                string(cell2mat(importTable{i,3})) ~= "" && ...
+                (importTable{i,4}) ~= NaT && ...
+                string(cell2mat(importTable{i,5})) ~= "" && ...
+                string(cell2mat(importTable{i,6})) ~= "";
     
     
     if condition
-    i = i + 1;
-    disp(['Load ' num2str(i) ' of ' num2str(size(importTable,1))])
-    
+        
 %   publication(i).Number = string(importTable(i,:).N);
-    publication(i).Title = string(cell2mat(importTable(index,:).title));
-    publication(i).Authors = string(cell2mat(importTable(index,:).authors));
-    publication(i).Date = string(importTable(index,:).date);
+    publication(i).Title = string(cell2mat(importTable(i,:).title));
+    publication(i).Authors = string(cell2mat(importTable(i,:).authors));
+    publication(i).Date = string(importTable(i,:).date);
     publication(i).Year = extractBetween(publication(i).Date,7,10);
-    publication(i).Journal = string(cell2mat(importTable(index,:).journal));
-    publication(i).Source = string(cell2mat(importTable(index,:).source));
+    publication(i).Journal = string(cell2mat(importTable(i,:).journal));
+    publication(i).Source = string(cell2mat(importTable(i,:).source));
 
     else 
         disp(newline)
         warning('Missing data !!!');
-        disp(['Missing data in ' num2str(index) ' row of table']);
+        disp(['Missing data in ' num2str(i) ' row']);
         disp(newline)
         beep
+        
+           string(cell2mat(importTable{i,2})) ~= "" 
+                string(cell2mat(importTable{i,3})) ~= ""
+                (importTable{i,4}) ~= NaT 
+                string(cell2mat(importTable{i,5})) ~= ""
+                string(cell2mat(importTable{i,6})) ~= ""
+        
         continue
     end
 
@@ -83,7 +88,6 @@ for index = 1:size(importTable,1)
     end
     
 end
-NumberOfElements = i;
 disp(newline)
 %------------------------------------------------
 
@@ -92,7 +96,7 @@ disp(newline)
 
 % SAVE ------------------------------------------
 folder = 'output';
-for i = 1:NumberOfElements
+for i = 1:size(importTable,1)
     disp(['Save ' num2str(i) ' of ' num2str(size(importTable,1))])
     
 fileNum = num2str(i,'%04u');
@@ -114,7 +118,7 @@ fclose(fileid);
 end
 %------------------------------------------------
 
-fclose('all');
+
 
 % example ---------------------------------------
 
