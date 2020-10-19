@@ -6,13 +6,10 @@ importTable = readtable('table.xlsx');
 i=0;
 for index = 1:size(importTable,1)
 
-    
-    
     condition = string(cell2mat(importTable{index,2})) ~= "" && ...
                 string(cell2mat(importTable{index,3})) ~= "" && ...
                 string(cell2mat(importTable{index,5})) ~= "" && ...
                 string(cell2mat(importTable{index,6})) ~= "";
-    
     
     if condition
     i = i + 1;
