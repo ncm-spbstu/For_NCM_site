@@ -12,6 +12,10 @@ for i = 1:size(importTable,1)
     publication(i).Year = extractBetween(publication(i).Date,7,10);
     publication(i).Journal = string(cell2mat(importTable(i,:).journal));
     publication(i).Source = string(cell2mat(importTable(i,:).source));
+
+    publication(i).Title = strrep(publication(i).Title,"–","-");
+    publication(i).Authors = strrep(publication(i).Authors,"–","-");
+
 end
 disp(newline)
 %------------------------------------------------
