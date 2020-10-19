@@ -3,7 +3,7 @@
 # Игнорировать файлы *.md из папки publicationsGenerator/output/
 /publicationsGenerator/output/*.md
 # И asv от matlab
-.asv
+
 
 
 
